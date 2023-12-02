@@ -12,11 +12,12 @@ const config: Config = {
         gray: "#F2F2F2",
         black: "#000",
         activeButton: "#323832",
-        primary: "#61C551",
+        primary: "#f4c64a",
         white: "white"
       },
       borderRadius: {
-        DEFAULT: "21px"
+        DEFAULT: "21px",
+        sm: "8px"
       },
     },
   },
