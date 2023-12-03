@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="bg-white mt-20 mx-20 p-12 rounded">
+    <main className="lg:mt-20 lg:mx-20 lg:p-12 bg-white mt-4 mx-4 p-8 rounded">
       <Header />
       <Hero />
     </main>

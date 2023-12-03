@@ -2,26 +2,18 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="flex items-center justify-center gap-14">
-      <div className="w-5/12 my-40 flex flex-col gap-6">
-        <h1 className="font-normal text-4xl text-black relative z-40">
-          {"Let's"} Convert Text to{" "}
-          <span className="bg-primary ml-1 px-2 absolute w-[fit-content] top-[17px] leading-[8px] text-black rounded h-3">
-            Emoji
+    <section className="xl:flex-row flex-col flex items-center justify-center gap-14">
+      <div className="xl:w-5/12 w-11/12 xl:my-40 mt-40 flex flex-col gap-6">
+        <h1 className="min-w-[300px] xl:min-w-[490px] xl:w-10/12 w-8/12 font-normal text-4xl text-black relative z-40">
+          Discover Your Ideal Experience with
+          <span className="bg-primary whitespace-nowrap inline-block ml-1 absolute px-2 w-[fit-content] bottom-[12px] leading-[8px] text-black rounded h-3">
+            The Product
           </span>
-          {/* <span className="absolute right-[225px] top-[32px]">
-            <Image
-              src="/draw.svg"
-              alt="logo"
-              width={216}
-              height={16}
-            />
-          </span> */}
-          {/* <div className="absolute h-[2px] w-52 bg-primary top-[36px] right-1 z-20" /> */}
         </h1>
         <span className="font-light text-2xl text-black">
-          Elevate your texts with the perfect emojis. Usemoji.app is coming
-          soon! Join the waiting list for updates and exclusive access.
+          Step into a realm of possibilities with The Product. Immerse yourself
+          in a shopping journey where intuitive features and cutting-edge design
+          come together to enhance your every selection.
         </span>
         <form>
           <div className="relative">
@@ -59,7 +51,7 @@ const Hero = () => {
         alt="hero"
         width={648}
         height={500}
-        className="rounded-sm"
+        className="rounded-sm xl:w-6/12 xl:max-w-[648px] w-11/12 h-max"
       />
     </section>
   );

@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center">
-      <Image src={"/logo.svg"} width={227} height={40} alt={config.title} />
+    <header className="flex justify-between items-start">
+      <Image src={"/logo.svg"} width={180} height={60} alt={config.title} />
       <nav>
-        <ul className="flex items-center gap-7 font-medium text-lg">
+        <ul className="flex items-center lg:gap-7 gap-3 font-medium text-lg">
           <li className="text-black">
             <Link href={config.socials.twitter} passHref legacyBehavior>
               <a

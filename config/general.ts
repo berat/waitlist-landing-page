@@ -1,10 +1,8 @@
 const config = {
-    domain: "beratbozkurt.net",
-    title: "Landing Page | Berat Bozkurt",
-    subTitlePrefix: "Berat Bozkurt",
-    description: "Berat Bozkurt, frontend developer, photography, blogging",
+    domain: "theproduct.com",
+    title: "Waitlist Page | The Product",
+    description: "The product, goal, sector, ",
     subscribeForm: "https://beratbozkurt.lemonsqueezy.com/",
-
 
     socials: {
         twitter: "https://x.com/beratbozkurt0",
