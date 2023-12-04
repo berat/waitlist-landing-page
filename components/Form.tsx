@@ -1,7 +1,8 @@
 "use client";
 
-import config from "@/config/general";
 import { useState } from "react";
+// config
+import config from "@/config/general";
 
 const findRequestURL = (mail: string) => {
   const formURL = config.subscribeForm.split("/");

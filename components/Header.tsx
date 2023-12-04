@@ -1,6 +1,7 @@
-import config from "@/config/general";
 import Image from "next/image";
 import Link from "next/link";
+// config
+import config from "@/config/general";
 
 const Header = () => {
   return (

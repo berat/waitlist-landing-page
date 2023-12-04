@@ -1,9 +1,11 @@
 "use client";
 
-import config from "@/config/general";
-import Image from "next/image";
-import Form from "./Form";
 import { useMemo } from "react";
+import Image from "next/image";
+// config
+import config from "@/config/general";
+// components
+import Form from "./Form";
 
 const Hero = () => {
   const title = useMemo(() => {
