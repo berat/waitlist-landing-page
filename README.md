@@ -1,7 +1,9 @@
 
 # Waitlist Landing Page
 
-If you are looking for a simple and effective waitlist page, this is the right place. Fork it and start using it :)
+If you are looking for a simple and effective waitlist page, this is the right place. Fork it and start using it :) 
+
+[Demo](https://waitlist-landing-page.vercel.app/)
 
 ## For Using
 - First of all, you need to change `src/config/general.ts` to yours.
