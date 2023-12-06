@@ -59,10 +59,10 @@ const Form = () => {
             onChange={(e) => setMail(e.target.value)}
           />
         </div>
-        <div className="mt-3 sm:mt-0 sm:ml-3">
+        <div className="mt-1 ml-2 sm:mt-3 sm:ml-3 flex-1 sm:flex-auto w-full sm:w-auto">
           <button
             type="submit"
-            className="absolute right-2 top-2 w-auto block  rounded-sm bg-activeButton py-3 px-4 font-medium text-white shadow hover:bg-activeButton disabled:cursor-not-allowed"
+            className="relative sm:absolute right-2 sm:top-2 w-full sm:w-auto block  rounded-sm bg-activeButton py-3 px-4 font-medium text-white shadow hover:bg-activeButton disabled:cursor-not-allowed"
             disabled={mail === "" || loading}
           >
             Join Waitlist
