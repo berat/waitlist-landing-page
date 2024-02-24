@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         gray: "#F2F2F2",
+        grayBackground: "#F7F7F7",
         black: "#000",
         activeButton: "#323832",
         primary: "#f4c64a",
