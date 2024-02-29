@@ -30,7 +30,7 @@ const HowWorks = () => {
                   <Image alt="" src={"/down.svg"} width={12} height={6} />
                 </div>
                 {activeTitle === index && (
-                  <p className="text-base text-activeButton w-[550px] pt-4 mb-2">
+                  <p className="text-base text-activeButton w-full md:w-[550px] pt-4 mb-2">
                     {item.description}
                   </p>
                 )}
