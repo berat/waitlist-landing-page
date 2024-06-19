@@ -37,4 +37,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Support
 
-https://beratbozkurt.lemonsqueezy.com/checkout
+[https://beratbozkurt.lemonsqueezy.com/checkout](https://beratbozkurt.lemonsqueezy.com/buy/730588c0-b35e-450e-b4a5-817104c82df1)
