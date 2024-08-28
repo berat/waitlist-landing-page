@@ -47,7 +47,7 @@ export default function Hero() {
   return (
     <div
       style={{
-        backgroundImage: `url(/DesktopScreen2.png)`, // Directly reference the image in the public folder
+        backgroundImage: `url(/DesktopScreen3.png)`, // Directly reference the image in the public folder
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh", // Adjust as needed
