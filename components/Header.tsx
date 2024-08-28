@@ -5,33 +5,22 @@ import config from "@/config/general";
 
 const Header = () => {
   return (
-    <header className="flex-col sm:flex-row flex justify-between items-start">
-      <Image src={"/logo.svg"} width={180} height={60} alt={config.title} />
+    <header
+      className="flex-col sm:flex-row flex justify-between items-center"
+      style={{ backgroundColor: "#0d1b2a",  marginLeft: '3rem', }}
+    >
+      <div className="flex items-center">
+        <Link href="/">
+          <Image
+            src="/logokropp1.png" // Path to your logo image
+            alt="Kropp Logo"
+            width={40} // Adjust width as needed
+            height={60} // Adjust height as needed
+          />
+        </Link>
+      </div>
       <nav>
-        <ul className="flex sm:mt-0 mt-4 items-center lg:gap-7 gap-3 font-medium text-base sm:text-lg">
-          <li className="text-black">
-            <Link href={config.socials.twitter} passHref legacyBehavior>
-              <a
-                className="px-5 py-2 rounded"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-            </Link>
-          </li>
-          <li className="bg-activeButton text-white rounded py-2">
-            <Link href={config.subscribeForm} passHref legacyBehavior>
-              <a
-                className="px-5 py-2 rounded"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Register
-              </a>
-            </Link>
-          </li>
-        </ul>
+        {/* Add navigation links here if needed */}
       </nav>
     </header>
   );

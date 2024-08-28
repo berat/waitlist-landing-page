@@ -10,8 +10,13 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
+    "framer-motion": "^11.3.30",
+    "i": "^0.3.7",
     "next": "14.0.3",
+    "npm": "^10.8.2",
     "react": "^18",
+    "react-confetti": "^6.1.0",
+    "react-confetti-explosion": "^2.1.2",
     "react-dom": "^18"
   },
   "devDependencies": {
