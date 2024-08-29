@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
-import DesktopScreen3 from "@/public/DesktopScreen3.png"; // Importing the image
-
+import DesktopScreen3 from "@/public/DesktopScreen3.png"; // Correctly importing the image
 
 export default function Hero() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,7 +11,12 @@ export default function Hero() {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    const handleResize = () => {
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     // MailerLite Universal Script
     (function (w, d, e, u, f, l, n) {
@@ -35,6 +39,10 @@ export default function Hero() {
     );
 
     ml("account", "1081832");
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handleJoinWaitlist = () => {
@@ -49,7 +57,7 @@ export default function Hero() {
   return (
     <div
       style={{
-        backgroundImage: `url(/DesktopScreen3.png)`,
+        backgroundImage: `url(${DesktopScreen3.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh",
@@ -85,49 +93,46 @@ export default function Hero() {
         }}
       >
         {submitted ? (
-          <>
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            style={{
+              textAlign: "center",
+              backgroundColor: "#778da9", // Blue/grey background
+              padding: "1rem 2rem",
+              borderRadius: "8px",
+            }}
+          >
             <motion.div
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
               style={{
-                textAlign: "center",
-                backgroundColor: "#778da9", // Blue/grey background
-                padding: "1rem 2rem",
-                borderRadius: "8px",
+                color: "#ffffff",
+                fontSize: "2rem",
+                marginBottom: "1rem",
               }}
             >
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                style={{
-                  color: "#ffffff",
-                  fontSize: "2rem",
-                  marginBottom: "1rem",
-                }}
-              >
-                🎉
-              </motion.div>
-              <p
-                style={{
-                  color: "#ffffff",
-                  fontWeight: 600,
-                  paddingBottom: "1rem",
-                }}
-              >
-              </p>
+              🎉
             </motion.div>
-          </>
-        ) : (
-          <></>
-        )}
+            <p
+              style={{
+                color: "#ffffff",
+                fontWeight: 600,
+                paddingBottom: "1rem",
+              }}
+            >
+              Thank you for joining the waitlist!
+            </p>
+          </motion.div>
+        ) : null}
 
         <motion.div
           className="ml-embedded"
           data-form="e1c5oX"
           initial={{ opacity: 0, y: -100 }} // Start with opacity 0 and y position above the screen
-          animate={{ opacity: 1, y: 2 }} // Animate to opacity 1 and y position to 0 (original position)
+          animate={{ opacity: 1, y: 0 }} // Animate to opacity 1 and y position to 0 (original position)
           transition={{ duration: 1.1 }} // Duration of the animation
           style={{ marginTop: "100px", marginLeft: "15px" }} // Keep the marginTop for spacing
         ></motion.div>
