@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logokropp2 from "@/public/logokropp2.png"; // Importing the image
+import logoKropp2 from "@/public/logokropp2.png"; // Importing the image
 
 const Header = () => {
   return (
@@ -15,7 +15,7 @@ const Header = () => {
       <div className="flex items-center">
         <Link href="/">
           <Image
-            src={logokropp2} // Using the imported image
+            src={logoKropp2} // Using the imported image
             alt="Kropp Logo"
             width={40} // Adjust width as needed
             height={60} // Adjust height as needed
