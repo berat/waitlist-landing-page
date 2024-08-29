@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-// config
-import config from "@/config/general";
 import logokropp2 from "@/public/logokropp2.png"; // Importing the image
 
 const Header = () => {
