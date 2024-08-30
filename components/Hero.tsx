@@ -6,6 +6,7 @@ import Confetti from "react-confetti";
 import DesktopScreen3 from "@/public/DesktopScreen3.png";
 import Head from "next/head";
 import MailerLite from "@mailerlite/mailerlite-nodejs";
+import { IoRefresh } from "react-icons/io5"; // Import a refresh icon from react-icons
 
 const mailerlite = new MailerLite({
   api_key:
@@ -46,6 +47,11 @@ export default function Hero() {
     }
 
     setTimeout(() => setIsExploding(false), 3000);
+  };
+
+  const handleReset = () => {
+    setSubmitted(false);
+    setEmail("");
   };
 
   return (
@@ -97,6 +103,7 @@ export default function Hero() {
                 backgroundColor: "#778da9",
                 padding: "1rem 2rem",
                 borderRadius: "8px",
+                position: "relative",
               }}
             >
               <motion.div
@@ -120,6 +127,24 @@ export default function Hero() {
               >
                 Thank you for joining the waitlist!
               </p>
+
+              {/* Refresh Button */}
+              <button
+                onClick={handleReset}
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: "50%",
+                  border: "none",
+                  padding: "10px",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "flex-start",
+                  justifyContent: "center",
+                  marginTop: "10px", // 10px below the message
+                }}
+              >
+                <IoRefresh size={24} color="#2E3191" />
+              </button>
             </motion.div>
           ) : (
             <>
