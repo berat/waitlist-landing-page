@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
 import DesktopScreen3 from "@/public/DesktopScreen3.png";
-import Head from "next/head";
+import logoDark2 from "@/public/logoDark2.png"; // Import the logo image
 import MailerLite from "@mailerlite/mailerlite-nodejs";
 import { IoRefresh } from "react-icons/io5"; // Import a refresh icon from react-icons
 
@@ -18,6 +18,7 @@ export default function Hero() {
   const [isExploding, setIsExploding] = useState(false);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [email, setEmail] = useState(""); // State for storing the email
+  const [isHovered, setIsHovered] = useState(false); // State to track if the area is hovered
 
   useEffect(() => {
     const handleResize = () => {
@@ -70,7 +71,7 @@ export default function Hero() {
           <Confetti
             width={windowSize.width}
             height={windowSize.height}
-            numberOfPieces={500}
+            numberOfPieces={120}
             gravity={0.07}
             initialVelocityY={2}
             recycle={false}
@@ -89,6 +90,7 @@ export default function Hero() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            justifyContent: "center",
             padding: "2rem",
             borderRadius: "8px",
           }}
@@ -104,6 +106,9 @@ export default function Hero() {
                 padding: "1rem 2rem",
                 borderRadius: "8px",
                 position: "relative",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center", // Centering all child elements
               }}
             >
               <motion.div
@@ -115,14 +120,13 @@ export default function Hero() {
                   fontSize: "2rem",
                   marginBottom: "1rem",
                 }}
-              >
-                🎉
-              </motion.div>
+              ></motion.div>
               <p
                 style={{
                   color: "#ffffff",
                   fontWeight: 600,
                   paddingBottom: "1rem",
+                  margin: 0, // Ensure no extra margins misalign
                 }}
               >
                 Thank you for joining the waitlist!
@@ -138,16 +142,19 @@ export default function Hero() {
                   padding: "10px",
                   cursor: "pointer",
                   display: "flex",
-                  alignItems: "flex-start",
+                  alignItems: "center",
                   justifyContent: "center",
                   marginTop: "10px", // 10px below the message
+                  marginBottom: "5px", // 10px below the message
                 }}
               >
-                <IoRefresh size={24} color="#2E3191" />
+                <IoRefresh size={24} color="#000000" />
               </button>
             </motion.div>
           ) : (
             <>
+              {/* Rectangular Area */}
+
               {/* Input field for email */}
               <input
                 type="email"
