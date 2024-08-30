@@ -121,39 +121,41 @@ export default function Hero() {
                 Thank you for joining the waitlist!
               </p>
             </motion.div>
-          ) : null}
+          ) : (
+            <>
+              {/* Input field for email */}
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                style={{
+                  padding: "10px",
+                  marginBottom: "20px",
+                  borderRadius: "5px",
+                  border: "1px solid #ccc",
+                  width: "250px",
+                  textAlign: "center",
+                }}
+              />
 
-          {/* Input field for email */}
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            style={{
-              padding: "10px",
-              marginBottom: "20px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-              width: "250px",
-              textAlign: "center",
-            }}
-          />
-
-          {/* Join Waitlist Button */}
-          <button
-            onClick={handleJoinWaitlist}
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#2E3191",
-              color: "#fff",
-              borderRadius: "5px",
-              cursor: "pointer",
-              border: "none",
-              fontSize: "16px",
-            }}
-          >
-            Join Waitlist
-          </button>
+              {/* Join Waitlist Button */}
+              <button
+                onClick={handleJoinWaitlist}
+                style={{
+                  padding: "10px 20px",
+                  backgroundColor: "#2E3191",
+                  color: "#fff",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                  border: "none",
+                  fontSize: "16px",
+                }}
+              >
+                Join Waitlist
+              </button>
+            </>
+          )}
         </div>
       </div>
     </>
