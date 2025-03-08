@@ -9,7 +9,7 @@ const config = {
     },
 
     contents: {
-        title: "Discover Your Ideal Experience with The Product",
+        title: "Discover Your Ideal Experience with The website",
         markOfTitle: "The Product", // its for marking the title. The text must contain on title. If not, it will be ignored.
         description: `Step into a realm of possibilities with The Product. Immerse yourself
         in a shopping journey where intuitive features and cutting-edge design
