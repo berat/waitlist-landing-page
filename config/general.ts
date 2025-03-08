@@ -9,11 +9,9 @@ const config = {
     },
 
     contents: {
-        title: "Discover Your Ideal Experience with The website",
+        title: "Demand for rentals could attract scammers.",
         markOfTitle: "The Product", // its for marking the title. The text must contain on title. If not, it will be ignored.
-        description: `Step into a realm of possibilities with The Product. Immerse yourself
-        in a shopping journey where intuitive features and cutting-edge design
-        come together to enhance your every selection.`,
+        description: `Friendly Neighbourhood Rental is committed to promoting fair renting practices. Stay informed and proactive to protect yourself during this challenging time.`,
 
         about: [
             {
