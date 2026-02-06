@@ -2,7 +2,7 @@ const config = {
     domain: "theproduct.com",
     title: "Waitlist Page | The Product",
     description: "Elevate your texts with the perfect emojis. Usemoji.app is coming soon! Join the waiting list for updates and exclusive access.",
-    subscribeForm: "https://dashboard.mailerlite.com/forms/631411/101265918935434456/share",
+    subscribeForm: "https://dashboard.mailerlite.com/forms/2093400/178641757298230478/share",
 
     socials: {
         twitter: "https://x.com/beratbuilds",
