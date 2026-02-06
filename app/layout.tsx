@@ -1,6 +1,6 @@
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 // config
 import config from "@/config/general";
 // components
@@ -22,7 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + " bg-gray"}>
         {children}
-        <Analytics />
+        {process.env.NODE_ENV === "production" && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID as string} />
+        )}
       </body>
     </html>
   );
