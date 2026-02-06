@@ -5,7 +5,7 @@ const config = {
     subscribeForm: "https://dashboard.mailerlite.com/forms/631411/101265918935434456/share",
 
     socials: {
-        twitter: "https://x.com/beratbozkurt0",
+        twitter: "https://x.com/beratbuilds",
     },
 
     contents: {

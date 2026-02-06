@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="w-11/12 xl:w-[1050px] mx-auto pb-16">
           © 2023 -
           <Link
-            href="https://twitter.com/beratbozkurt0/status/1699164095994372577"
+            href="https://twitter.com/beratbuilds"
             passHref
             legacyBehavior
           >
